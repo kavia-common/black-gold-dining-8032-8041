@@ -3,16 +3,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:restaurant_frontend/main.dart';
 
 void main() {
-  testWidgets('App generation message displayed', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
+  testWidgets('App builds and shows bottom nav with Menu', (WidgetTester tester) async {
+    await tester.pumpWidget(const RestaurantApp());
+    await tester.pumpAndSettle();
 
-    expect(find.text('restaurant_frontend App is being generated...'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
-  });
-
-  testWidgets('App bar has correct title', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
-
-    expect(find.text('restaurant_frontend'), findsOneWidget);
+    expect(find.text('Black & Gold Dining'), findsOneWidget);
+    expect(find.text('Menu'), findsOneWidget);
+    expect(find.text('Cart'), findsOneWidget);
+    expect(find.text('Orders'), findsOneWidget);
   });
 }

@@ -1,16 +1,28 @@
 # restaurant_frontend
 
-A new Flutter project.
+Black & Gold Dining — a Flutter mobile app that lets customers browse the menu, view item details, add items to the cart, and place orders.
 
-## Getting Started
+Features
+- Bottom navigation for Menu, Cart, and Orders
+- Prominent product imagery with add-to-cart actions
+- Modern Ocean Professional style: blue (#2563EB) and amber/gold (#F59E0B) accents, rounded corners, subtle gradients, clean layouts
+- Cart with quantity controls and order summary
+- Orders list with expandable details
 
-This project is a starting point for a Flutter application.
+Getting Started
+- Flutter 3.29+ and Dart 3.7+ recommended
+- Run:
+  flutter pub get
+  flutter run
 
-A few resources to get you started if this is your first Flutter project:
+Structure
+- lib/
+  - main.dart: App entry and provider wiring
+  - src/app_theme.dart: Central theme
+  - src/models/: Menu and Order models
+  - src/providers/: Menu, Cart, Orders providers
+  - src/screens/: Bottom nav shell and tabs (Menu, Cart, Orders); item details
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Notes
+- Menu items are mocked for now; integrate REST calls where MenuProvider.loadMenu() is invoked.
+- Colors follow the Ocean Professional guide and gold accents for actions (buttons, badges).
