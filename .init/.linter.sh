@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/kavia/workspace/code-generation/black-gold-dining-8032-8041/restaurant_frontend
+flutter analyze
+
